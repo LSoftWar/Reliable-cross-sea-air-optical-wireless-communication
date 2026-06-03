@@ -8,7 +8,7 @@ This project implements the optical beam alignment part of the paper, including 
 pip install -r requirements.txt
 ```
 
-The sea-state folders are fixed as follows:
+The sea state folders are fixed as follows:
 
 | Folder | Meaning |
 | --- | --- |
@@ -38,9 +38,9 @@ PPO_preTrained/{sea}/{algo}/
 python test.py --algo e2ppo --sea four --checkpoint latest --episodes 1
 ```
 
-`test.py` reports the episode reward, average pointing error, average received optical power, interrupted steps, and total angular adjustment. When `--checkpoint latest` is used, the latest `.pth` file in the corresponding sea-state and algorithm folder is loaded automatically.
+`test.py` reports the episode reward, average pointing error, average received optical power, interrupted steps, and total angular adjustment. When `--checkpoint latest` is used, the latest `.pth` file in the corresponding sea state and algorithm folder is loaded automatically.
 
-# Cross Sea-Air Target Tracking — Multi-Agent Reinforcement Learning
+# 2、Cross Sea-Air Target Tracking
 
 A multi-agent target tracking system based on MADDPG / MASAC / ED-MADDPG. An AAV (Aerial Autonomous Vehicle) and an AUV (Autonomous Underwater Vehicle) collaborate to track a target via optical communication links under various sea states.
 
@@ -75,7 +75,7 @@ Target Tracking/
 │   ├── multiagent-particle-envs/
 │   │   └── multiagent/
 │   │       └── scenarios/   # Simulation environment
-│   │           ├── threeD.py          # Cross-domain target tracking scenario definition
+│   │           ├── threeD.py          # Cross sea-air target tracking scenario definition
 │   │           ├── tracking_utils.py  # Channel model, EKF, sea states
 │   │           └── environment.py     # Gym environment wrapper
 │   ├── experiments/
